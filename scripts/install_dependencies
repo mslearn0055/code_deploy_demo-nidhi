@@ -1,2 +1,8 @@
 #!/bin/bash
 sudo apt install -y apache2
+# application_stop.sh
+if [ -f /var/www/html/index.html ]; then
+    echo "Removing existing index.html"
+    sudo rm /var/www/html/index.html
+fi
+
