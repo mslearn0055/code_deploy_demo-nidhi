@@ -1,11 +1,4 @@
 #!/bin/bash
-# application_stop.sh
-if [ -f /var/www/html/index.html ]; then
-    echo "Removing existing index.html"
-    sudo rm /var/www/html/index.html
-fi
-
-
 isExistApp = `pgrep apache2`
 if [[ -n  $isExistApp ]]; then
     sudo service apache2 stop        
